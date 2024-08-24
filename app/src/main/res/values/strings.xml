@@ -8,6 +8,9 @@
     <string name="precio_total">Precio total: %1$f</string>
     <string name="total_final">Total final: %1$f</string>
     <string name="delivery">Delivery</string>
-    <string name="selecciona_producto">Selecciona producto</string>
-    <string name="seleccionar">seleccionar</string>
-    <string name="titulo_app">Semana uno por dark0</string></resources>
+    <string name="selecciona_producto">Producto</string>
+    <string name="seleccionar">Selecciona el producto</string>
+    <string name="titulo_app">Semana uno por dark0</string>
+    <string name="precio_total_base">Precio total:</string>
+    <string name="total_final_base">Total final:</string>
+</resources>

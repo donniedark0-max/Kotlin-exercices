@@ -19,12 +19,19 @@ class MainActivity : AppCompatActivity(),ProductosBottomSheetDialogFragment.Prod
     private lateinit var cbDelivery: CheckBox
     private lateinit var cbDescuento: CheckBox
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btnCalcular = findViewById(R.id.btnCalcular)
         tvProducto = findViewById(R.id.tvProducto)
-        tvProducto = findViewById(R.id.tvProducto)
+        tvPrecioTotal = findViewById(R.id.tvPrecioTotal)
+        tvTotalFinal = findViewById(R.id.tvTotalFinal)
+        tilCantidad = findViewById(R.id.tilCantidad)
+        cbDelivery = findViewById(R.id.cbDelivery)
+        cbDescuento = findViewById(R.id.cbDescuento)
+        tvPrecioTotal.text = getString(R.string.precio_total_base) // Nuevorecurso de cadena
+        tvTotalFinal.text = getString(R.string.total_final_base)
         val btnSeleccionarProducto = findViewById<Button>(R.id.btnSeleccionarProducto)
         btnSeleccionarProducto.setOnClickListener {
             mostrarOpcionesProductos()
@@ -42,8 +49,6 @@ class MainActivity : AppCompatActivity(),ProductosBottomSheetDialogFragment.Prod
 
     override fun onProductoSeleccionado(producto: String) {
         tvProducto.text = producto
-        // Actualizar el precio según el producto seleccionado
-        // ...
     }
 
 
@@ -52,7 +57,6 @@ class MainActivity : AppCompatActivity(),ProductosBottomSheetDialogFragment.Prod
         val cantidad = tilCantidad.editText?.text.toString().toDoubleOrNull() ?: 0.0
         val delivery = cbDelivery.isChecked
         val descuento = cbDescuento.isChecked
-
         val precio = when (producto) {
             "1 Pollo a la brasa" -> 60.00
             "1 Monstruo" -> 15.00

@@ -14,6 +14,7 @@
         android:id="@+id/tvProducto"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
         android:text="@string/selecciona_producto"
         android:textAppearance="?attr/textAppearanceBodyLarge"
         app:layout_constraintTop_toBottomOf="@id/tvTitulo"
@@ -22,6 +23,7 @@
 
     <Button
         android:id="@+id/btnSeleccionarProducto"
+        android:backgroundTint="@color/my_button_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/seleccionar"
@@ -33,6 +35,7 @@
         android:id="@+id/tvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
         android:text="@string/titulo_app"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -58,30 +61,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPrecio"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="@string/precio"
-        app:layout_constraintTop_toBottomOf="@id/tilCantidad"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="numberDecimal" />
-
-
-    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/cbDelivery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/delivery"
-        app:layout_constraintTop_toBottomOf="@id/tilPrecio"
+        app:layout_constraintTop_toBottomOf="@id/tilCantidad"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
@@ -94,6 +81,7 @@
 
     <Button
         android:id="@+id/btnCalcular"
+        android:backgroundTint="@color/my_button_color"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/calcular"

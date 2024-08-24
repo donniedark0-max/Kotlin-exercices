@@ -34,8 +34,8 @@ class ProductosBottomSheetDialogFragment : BottomSheetDialogFragment() {
             dismiss()
         }
         return view
-    }
-    interface ProductoSeleccionadoListener {
+    }    interface ProductoSeleccionadoListener {
         fun onProductoSeleccionado(producto: String)
     }
+
 }
